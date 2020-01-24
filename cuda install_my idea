@@ -1,0 +1,24 @@
+
+
+-------------------------------------------------------
+$ sudo apt-get install cuda-toolkit-10.0
+
+-------------------------------------------------------
+
+$ cd /usr/local
+$ sudo rm cuda
+$ sudo ln -s cuda-10.0 cuda
+
+-------------------------------------------------------
+
+$ tar -xzvf cudnn(*****************************************************).tgz
+$ sudo cp cuda/include/cudnn.h /usr/local/cuda-10.0/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64
+$ sudo chmod a+r /usr/local/cuda-10.0/include/cudnn.h /usr/local/cuda-10.0/lib64/libcudnn*
+
+-------------------------------------------------------
+
+$ sudo sh -c 'echo "export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/lib64:\$LD_LIBRARY_PATH" > /etc/profile.d/cuda.sh'
+
+
+   /usr/local/cuda/lib64:/usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/lib64
