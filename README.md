@@ -6,3 +6,6 @@ https://devtalk.nvidia.com/default/topic/1048021/cuda-setup-and-installation/err
 
 
 https://medium.com/@peterjussi/multicuda-multiple-versions-of-cuda-on-one-machine-4b6ccda6faae
+
+
+https://varhowto.com/install-miniconda-ubuntu-20-04/
