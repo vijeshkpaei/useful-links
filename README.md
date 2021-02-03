@@ -14,3 +14,6 @@ https://varhowto.com/install-miniconda-ubuntu-20-04/
 
 
 https://towardsdatascience.com/pothole-detection-with-mask-rcnn-b78d18a89915
+
+
+https://github.com/vijendra1125/Custom-Mask-RCNN-Using-Tensorfow-Object-Detection-API
