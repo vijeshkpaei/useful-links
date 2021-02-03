@@ -9,3 +9,8 @@ https://medium.com/@peterjussi/multicuda-multiple-versions-of-cuda-on-one-machin
 
 
 https://varhowto.com/install-miniconda-ubuntu-20-04/
+
+
+
+
+https://towardsdatascience.com/pothole-detection-with-mask-rcnn-b78d18a89915
