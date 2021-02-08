@@ -1,0 +1,151 @@
+
+----------------------------------------------uninstall mysql------------------------
+
+sudo apt-get remove --purge mysql*
+sudo apt-get autoremove
+sudo apt-get autoclean
+# https://linuxscriptshub.com/uninstall-completely-remove-mysql-ubuntu-16-04/
+-------------------------------------------------------------------------------------------
+
+----------------validation----------------
+sudo mysql_secure_installation
+# increase the level of security.  # all are yes, given 
+----------------------------------------------------
+
+
+sudo mysql -u root
+#use system password
+-------------------------------------------------------------
+# when complete the sudo mysql -u root after only use the below command
+ 
+mysql -u root -p
+
+mysql>>    select user,host,authentication_string from mysql.user;   # check the password of root 
+
+mysql >>   select user,host,authentication_string, plugin from mysql.user;
+           
+mysql>>    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY "vijnalabs";               # altering
+#using alter command for root password.
+
+----------------------------------------------------------------------
+
+
+select * from mysql.user;    # show all in mysql.user
+show databases;               # show databases
+
+show databases;               #CREATE DATABASE mydatabase;
+
+----------------------------------------
+
+mysql -u root -p suspecttrackerdb < cleardb.sql              ==using for put the cleardb.sql in to suspecttrackerdb database.# IMPORTING
+
+INSERT INTO `cameradetails` (cameraID, Location, Description) VALUES ('vijesh','bbbbb','nothing')
+
+mysqldump -u root -p suspecttrackerdb > export.sql   == EXPORT
+
+history | grep mysqldump  # history
+mysqldump -u dashboard -p suspecttrackerdb cameradetails > cam.sql   ===exporting only single table / use root
+
+select cameraID, Location, Description from suspecttrackerdb.cameradetails;  # to show details directly from one table
+
+SELECT SHA1(UNHEX(SHA1("vijnalabs")));  # verify password 
+
+
+---------------------------------------ENV-------------------------------------------
+
+conda create -n myenv python=3.6.9
+conda create --name
+conda activate name
+
+conda deactivate # deactivate
+
+#https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+conda env remove --name myenv   # remove 
+
+conda env list
+--------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------FFMEG---------------------------------------------------------------------------------------------------
+
+ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv
+
+
+ffmpeg -i rtsp://admin:vijnalabs01@172.16.35.230 -acodec copy -vcodec copy abc.mp4  
+
+
+----ipcamera
+
+
+ffmpeg -i rtsp://admin:vijnalabs01@172.16.35.230 -t 00:00:10 -acodec copy -vcodec copy abc.mp4
+
+sudo apt install gnome-control-center # open settings trouble shooting ubuntu 19.04
+
+
+---------------------------------------------------------------------------------------------------------------
+192.168.1.64  ---IP cam default adress
+
+ffplay rtsp://admin:vijnalabs01@172.16.35.200
+
+
+
+watch -n 0.5 nvidia-smi            -- show
+
+image >> osd settings --- camera name change 
+
+
+nmap 192.168.1.*
+--------------------------------------------------------------------------------------------------------------------
+address = rtsp://admin:vijnalabs01@172.16.35.200
+
+
+
+
+-------------------------------
+
+
+COMMAND TO SEE MAIN STREAM AND SUBSTREAMS:
+Main stream:
+ffmpeg -i rtsp://admin:vijnalabs01@172.16.35.231/Streaming/Channels/101/ -vcodec copy high.mp4
+Subs stream:
+ffmpeg -i rtsp://admin:vijnalabs01@172.16.35.231/Streaming/Channels/102/ -vcodec copy low.mp4
+
+
+
+
+
+
+
+
+
+----------------------------mysql---------------------------------
+
+UPDATE RegisteredVehicle SET name = 'Unknown' WHERE details = 'Unauthorised person';
+
+SELECT * from RegisteredVehicle WHERE name = 'Deepak';
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------usb webcam---------------------------------
+ffmpeg -f v4l2 -framerate 25 -video_size 1280x720 -i /dev/video2 new.mkv
+
+
+
+---------------------------
+ ffmpeg -i need.mp4 -ss 00:07:40 -to 00:08:00 -c:v copy -c:v copy test.mp4
+
+
+
+
+
